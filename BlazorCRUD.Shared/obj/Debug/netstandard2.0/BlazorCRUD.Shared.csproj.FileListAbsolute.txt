@@ -1,0 +1,10 @@
+E:\Kimen\EjemploPaginacion\BlazorCRUD.Shared\bin\Debug\netstandard2.0\BlazorCRUD.Shared.deps.json
+E:\Kimen\EjemploPaginacion\BlazorCRUD.Shared\bin\Debug\netstandard2.0\BlazorCRUD.Shared.dll
+E:\Kimen\EjemploPaginacion\BlazorCRUD.Shared\bin\Debug\netstandard2.0\BlazorCRUD.Shared.pdb
+E:\Kimen\EjemploPaginacion\BlazorCRUD.Shared\obj\Debug\netstandard2.0\BlazorCRUD.Shared.csproj.AssemblyReference.cache
+E:\Kimen\EjemploPaginacion\BlazorCRUD.Shared\obj\Debug\netstandard2.0\BlazorCRUD.Shared.GeneratedMSBuildEditorConfig.editorconfig
+E:\Kimen\EjemploPaginacion\BlazorCRUD.Shared\obj\Debug\netstandard2.0\BlazorCRUD.Shared.AssemblyInfoInputs.cache
+E:\Kimen\EjemploPaginacion\BlazorCRUD.Shared\obj\Debug\netstandard2.0\BlazorCRUD.Shared.AssemblyInfo.cs
+E:\Kimen\EjemploPaginacion\BlazorCRUD.Shared\obj\Debug\netstandard2.0\BlazorCRUD.Shared.csproj.CoreCompileInputs.cache
+E:\Kimen\EjemploPaginacion\BlazorCRUD.Shared\obj\Debug\netstandard2.0\BlazorCRUD.Shared.dll
+E:\Kimen\EjemploPaginacion\BlazorCRUD.Shared\obj\Debug\netstandard2.0\BlazorCRUD.Shared.pdb

@@ -1,0 +1,56 @@
+﻿@inject HttpClient http
+
+    <EditForm Model="@Persona" OnValidSubmit="@OnValidSubmit">
+        <div class="form-group">
+            <label>Nombre:</label>
+            <div>
+                <InputText class="form-control" @bind-Value="@Persona.Nombre" />
+                <ValidationMessage For="@(() => Persona.Nombre)" />
+            </div>
+        </div>
+
+      
+        <button type="submit" class="btn btn-success">@TextoBoton</button>
+        <DataAnnotationsValidator />
+    </EditForm>
+
+@code {
+    [Parameter] public Persona Persona { get; set; } = new Persona();
+    [Parameter] public String TextoBoton { get; set; } = "Salvar cambios";
+    [Parameter] public EventCallback OnValidSubmit { get; set; }
+    List<Estado> Estados = new List<Estado>();
+    List<Pais> Paises = new List<Pais>();
+    private int paisId = 0;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (Persona.Estado != null)
+        {
+            paisId = Persona.Estado.PaisId;
+            await CargarEstados(Persona.Estado.PaisId);
+        }
+
+        Paises = await http.GetJsonAsync<List<Pais>>("api/paises");
+    }
+
+    private async Task ValorPaisCambiado(int value)
+    {
+        Persona.EstadoId = 0;
+        paisId = value;
+        await InvokeAsync(StateHasChanged);
+
+        if (value == 0)
+        {
+            Estados.Clear();
+        }
+        else
+        {
+            await CargarEstados(value);
+        }
+    }
+
+    private async Task CargarEstados(int paisId)
+    {
+        Estados = await http.GetJsonAsync<List<Estado>>($"api/paises/{paisId}/estados");
+    }
+}
